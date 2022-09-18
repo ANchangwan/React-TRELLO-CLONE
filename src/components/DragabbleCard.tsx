@@ -18,9 +18,9 @@ interface IDragabbleCardProps {
   index: number;
 }
 
-function DragabbleCard({ toDoId, todoText, index }: IDragabbleCardProps) {
+function DragabbleCard({ toDoId, toDoText, index }: IDragabbleCardProps) {
   return (
-    <Draggable key={toDo} draggableId={toDoId + ""} index={index}>
+    <Draggable draggableId={toDoId + ""} index={index}>
       {(magic, snapshot) => (
         <Card
           isDragging={snapshot.isDragging}
